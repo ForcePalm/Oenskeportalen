@@ -5,7 +5,10 @@
     <title>Ønskeportalen</title>
 
     <!--Reset css-->
-    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+    <!--Style css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
 

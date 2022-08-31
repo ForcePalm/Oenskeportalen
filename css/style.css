@@ -1,0 +1,74 @@
+/*Fixed borders*/
+
+*{
+  box-sizing: border-box;
+  font-family:Trebuchet MS,Helvetica,sans-serif;
+}
+
+
+/*HTML and BODY 100%*/
+
+html,
+body{
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+
+/*Background color*/
+
+body{
+  background-color: #212221;
+}
+
+
+/*Removes input glow*/
+
+:focus{
+  outline: none;
+}
+
+
+/*Placeholder color*/
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ccc;
+  opacity: 1; /* Firefox */
+}
+
+
+/*Submit and button show pointer*/
+
+input[type="submit"],
+button{
+  cursor: pointer;
+}
+
+
+/*Remove up and down arrows from input type number*
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Apple input prefix*/
+
+input{
+  border-radius: 0;
+}
+
+
+/*Responsive images*/
+
+img{
+  height: auto;
+  max-width: 100%;
+}
