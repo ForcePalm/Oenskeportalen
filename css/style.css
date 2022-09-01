@@ -18,7 +18,7 @@ body{
 /*Background color*/
 
 body{
-  background-color: #212221;
+  background-color: #F2F2F2;
 }
 
 
@@ -78,10 +78,12 @@ img{
 
 .main-header{
   background-color: #1072b5;
-  min-height: 100%;
+  min-width: 100%;
   min-height: 80px;
   display: flex;
   padding: 10px 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: fixed;
 }
 
 /*Logo*/
@@ -122,12 +124,27 @@ img{
   line-height: 60px;
 }
 
-.main-navigator li a{
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+.main-navigator ul li{
+  margin-left: 30px;
 }
 
-.main-navigator li a:hover{
+.main-navigator ul li:first-child{
+  margin-left: 0;
+}
+
+.main-navigator li{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 34px;
+  border-radius: 10%;
+  text-shadow: 3px 3px #eb5f69;
+  transition: all ease-in-out 0.3s;
+  font-family: 'Niconne', cursive;
+  cursor: pointer;
+}
+
+.main-navigator li:hover{
   color: #eb5f69;
+  text-shadow: none;
 }

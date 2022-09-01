@@ -15,7 +15,8 @@
     <!--Style css-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-
+    <!--Jquery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <!--Header-->
@@ -29,9 +30,13 @@
 
       <nav class="main-navigator">
         <ul>
-          <li><a href="">Login</a></li>
+          <li id="register">Tilmeld</li>
+          <li id="login">Login</li>
         </ul>
       </nav>
     </header>
+
+    <!--Popup script-->
+    <script src="js/popup.js"></script>
   </body>
 </html>
