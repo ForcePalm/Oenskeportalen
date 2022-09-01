@@ -72,3 +72,62 @@ img{
   height: auto;
   max-width: 100%;
 }
+
+
+/*Header*/
+
+.main-header{
+  background-color: #1072b5;
+  min-height: 100%;
+  min-height: 80px;
+  display: flex;
+  padding: 10px 30px;
+}
+
+/*Logo*/
+
+.logo{
+  margin-right: 10px;
+}
+
+.logo a{
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 60px;
+  font-size: 40px;
+  font-family: 'Niconne', cursive;
+  text-shadow: 3px 3px #eb5f69;
+}
+
+.logo a img{
+  height: 60px;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+  box-shadow: rgba(235,95,105, 0.16) 0px 1px 4px, rgb(235,95,105) 0px 0px 0px 3px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+/*navigator*/
+
+.main-navigator{
+  margin-left: auto;
+}
+
+.main-navigator ul{
+  display: flex;
+  line-height: 60px;
+}
+
+.main-navigator li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.main-navigator li a:hover{
+  color: #eb5f69;
+}
