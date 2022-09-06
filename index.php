@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
+    <!--Charset-->
     <meta charset="utf-8">
+
+    <!--Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Title-->
     <title>Ønskeportalen</title>
 
+    <!--Favicon-->
     <link rel="icon" type="image/png" href="gfx/favicon.png">
 
     <!--Reset css-->
@@ -11,6 +18,9 @@
 
     <!--Google font Niconne-->
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+    <!--Google font Roboto Slab-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <!--Style css-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -45,6 +55,17 @@
 
     <!--Main-->
     <main class="main-content">
+
+      <!--Landingpage-->
+      <div class="landingpage">
+        <div>
+          <h2>Hej og velkommen til Ønskeportalen</h2>
+          <h3>Ønskeportalen gør det nemt for dig at gemme og dele ønskerlister med familie og venner.</h3>
+        </div>
+        <div>
+          <img src="gfx/gift.png" alt="Blå gave med rødtbånd" />
+        </div>
+      </div>
 
       <!--Popup-->
       <div class="popup-overlay"></div>
@@ -122,7 +143,18 @@
         </form>
       </div>
 
+      <!--Footer-->
+      <footer class="main-footer">
+        <h4>Ønskeportalen</h4>
+        <p>Copyright © 2022 Ønskeportalen</p>
+        <ul>
+          <li><a href="">Om os</a></li>
+          <li><a href="">Hjælp</a></li>
+          <li><a href="mailto:email@example.com">Kontakt</a></li>
+        </ul>
+      </footer>
     </main>
+
 
     <!--Popup script-->
     <script src="js/popup.js"></script>
