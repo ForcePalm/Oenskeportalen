@@ -127,16 +127,14 @@ img{
 }
 
 .main-navigator ul li{
-  margin-left: 30px;
-
+  margin-left: 60px;
 }
 
 .main-navigator ul li:first-child{
   margin-left: 0;
-  margin-right: 30px;
 }
 
-.main-navigator li{
+.main-navigator ul li{
   text-decoration: none;
   color: #fff;
   font-weight: bolder;
@@ -147,9 +145,24 @@ img{
   cursor: pointer;
 }
 
-.main-navigator li:hover{
+.main-navigator ul li:hover{
   color: #eb5f69;
   text-shadow: none;
+}
+
+.main-navigator ul li a{
+  text-decoration: none;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+}
+
+.main-navigator ul li a:hover{
+  color: #eb5f69;
+  text-shadow: none;
+}
+
+.main-navigator ul li .menu-icon{
+  width: 25px;
 }
 
 
@@ -299,12 +312,13 @@ img{
   border-color: #00a9cf;
   font-size: 18px;
   font-weight: bold;
-  text-shadow: 2px 2px #eb5f69;
+  text-shadow: 2px 2px #000;
   border-style: solid;
 }
 
 .login form input[type="submit"]:hover{
   background-color: #007f9c;
+  text-shadow: none;
 }
 
 .login form div{
@@ -420,12 +434,13 @@ img{
   border-color: #00a9cf;
   font-size: 18px;
   font-weight: bold;
-  text-shadow: 2px 2px #eb5f69;
+  text-shadow: 2px 2px #000;
   border-style: solid;
 }
 
 .register form input[type="submit"]:hover{
   background-color: #007f9c;
+  text-shadow: none;
 }
 
 .register form div{
@@ -439,6 +454,176 @@ img{
   font-size: 20px;
   color: #00a9cf;
   cursor: pointer;
+}
+
+
+/*Pager*/
+
+.pager{
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.pager .headline{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+
+.pager .headline h2{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.pager .headline button{
+  width: 160px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #00a9cf;
+  border-color: #00a9cf;
+  border-style: solid;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 6px;
+  height: 40px;
+}
+
+.pager .headline a{
+  width: 160px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #00a9cf;
+  border-color: #00a9cf;
+  border-style: solid;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 6px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.pager form{
+  min-width: 100%;
+}
+
+.pager form label{
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.pager form input{
+  display: block;
+  min-width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border-width: 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-color: #ccc;
+}
+
+.pager form textarea{
+  display: block;
+  min-width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  border-width: 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-color: #ccc;
+  resize: none;
+  min-height: 200px;
+}
+
+.pager form > div{
+  display: flex;
+}
+
+.pager form > div div{
+  flex: 1;
+}
+
+.pager form > div div:first-child{
+  margin-right: 10px;
+}
+
+.pager form > div div:last-child{
+  margin-left: 10px;
+}
+
+.pager form input[type="submit"]{
+  margin-bottom: 0;
+  background-color: #00a9cf;
+  color: #fff;
+  border-color: #00a9cf;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  border-style: solid;
+}
+
+.pager form input[type="submit"]:hover{
+  background-color: #007f9c;
+  text-shadow: none;
+}
+
+.pager .wishlist-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+  margin-left: -1%;
+  margin-right: -1%;
+  align-items: flex-start;
+}
+
+.pager .wishlist-wrapper .wishlist{
+  min-height: 20px;
+  width: 31.33333333333333%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 2%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+  align-content: flex-start;
+}
+
+.pager .wishlist-wrapper .wishlist .listheader{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pager .wishlist-wrapper .wishlist .listdescription{
+  margin-bottom: 10px;
+}
+
+.pager .wishlist-wrapper .wishlist .wishcount{
+  margin-bottom: 10px;
+}
+
+
+.pager .wishlist-wrapper .wishlist ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top:auto;
+}
+
+.pager .wishlist-wrapper .wishlist ul li a{
+  text-decoration: none;
+  color: #00a9cf;
 }
 
 
@@ -462,13 +647,13 @@ img{
   justify-content: space-between;
 }
 
-.main-footer h4{
+.main-footer .big-text{
   font-weight: bold;
   font-size: 20px;
   text-shadow: 2px 2px #eb5f69;
 }
 
-.main-footer p{
+.main-footer .small-text{
   font-size: 14px;
   color: #f1f1f1;
 }

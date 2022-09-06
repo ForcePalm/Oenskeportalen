@@ -145,12 +145,12 @@
 
       <!--Footer-->
       <footer class="main-footer">
-        <h4>Ønskeportalen</h4>
-        <p>Copyright © 2022 Ønskeportalen</p>
+        <p class="big-text">Ønskeportalen</p>
+        <p class="small-text">Copyright © 2022 Ønskeportalen</p>
         <ul>
           <li><a href="">Om os</a></li>
-          <li><a href="">Hjælp</a></li>
           <li><a href="mailto:email@example.com">Kontakt</a></li>
+          <li><a href="">Hjælp</a></li>
         </ul>
       </footer>
     </main>
