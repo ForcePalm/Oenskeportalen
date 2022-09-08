@@ -12,5 +12,5 @@
   <label for="description">Beskrivelse</label>
   <textarea name="description" id="description">Min nye ønskesedel til min fødselsdag.</textarea>
 
-  <input type="submit" value="Opret">
+  <input type="submit" value="Gem">
 </form>

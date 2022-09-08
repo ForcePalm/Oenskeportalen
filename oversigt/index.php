@@ -57,6 +57,19 @@
     <!--Main-->
     <main class="main-content">
 
+      <!--Menu-->
+      <div class="menu">
+        <ul>
+          <li><a href="?page=oversigt">Oversigt</a></li>
+          <li class="hidden"><a href="?page=profil">Min Profil</a></li>
+          <li><a href="?page=opretliste">Opret Ønskeliste</a></li>
+          <li><a href="?page=delt">Delt Med Mig</a></li>
+          <li><a href="?page=om">Om Os</a></li>
+          <li><a href="?page=hjealp">Hjælp</a></li>
+          <li class="hidden"><a href="code/logout.php">Logud</a></li>
+        </ul>
+      </div>
+
       <!--Pager-->
       <div class="pager">
         <?php
@@ -64,20 +77,20 @@
           require_once 'code/pager.php';
          ?>
       </div>
-
-      <!--Footer-->
-      <footer class="main-footer">
-        <p class="big-text">Ønskeportalen</p>
-        <p class="small-text">Copyright © 2022 Ønskeportalen</p>
-        <ul>
-          <li><a href="">Om os</a></li>
-          <li><a href="mailto:email@example.com">Kontakt</a></li>
-          <li><a href="">Hjælp</a></li>
-        </ul>
-      </footer>
     </main>
 
-    <!--Navigator script-->
-    <script src="../js/navigator.js"></script>
+    <!--Footer-->
+    <footer class="main-footer">
+      <p class="big-text">Ønskeportalen</p>
+      <p class="small-text">Copyright © 2022 Ønskeportalen</p>
+      <ul>
+        <li><a href="?page=om">Om os</a></li>
+        <li><a href="mailto:email@example.com">Kontakt</a></li>
+        <li><a href="?page=hjaelp">Hjælp</a></li>
+      </ul>
+    </footer>
+
+    <!--Menu script-->
+    <script src="../js/menu.js"></script>
   </body>
 </html>

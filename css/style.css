@@ -85,7 +85,7 @@ img{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px;
   border-bottom: 4px solid #eb5f69;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 
 /*Logo*/
@@ -171,6 +171,7 @@ img{
 .main-content{
   min-width: 100%;
   min-height: 100vh;
+  padding-bottom: 20px;
   padding-top: 103px;
   padding-left: 40px;
   padding-right: 40px;
@@ -229,7 +230,7 @@ img{
   left: 0;
   background-color: rgba(16, 114, 181, 0.4);
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -264,7 +265,7 @@ img{
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  color: #00a9cf;
+  color: #1072b5;
   margin-bottom: 40px;
   text-shadow: 2px 2px #f1f1f1;
 }
@@ -307,9 +308,9 @@ img{
 
 .login form input[type="submit"]{
   margin-bottom: 0;
-  background-color: #00a9cf;
+  background-color: #36a32e;
   color: #fff;
-  border-color: #00a9cf;
+  border-color: #36a32e;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 2px 2px #000;
@@ -317,7 +318,7 @@ img{
 }
 
 .login form input[type="submit"]:hover{
-  background-color: #007f9c;
+  background-color: #257220;
   text-shadow: none;
 }
 
@@ -330,13 +331,13 @@ img{
   right: 10px;
   top: 30%;
   font-size: 20px;
-  color: #00a9cf;
+  color: #1072b5;
   cursor: pointer;
 }
 
 .login .forgot-password{
   text-align: center;
-  color: #00a9cf;
+  color: #1072b5;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -373,7 +374,7 @@ img{
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  color: #00a9cf;
+  color: #1072b5;
   margin-bottom: 40px;
   text-shadow: 2px 2px #f1f1f1;
 }
@@ -429,9 +430,9 @@ img{
 
 .register form input[type="submit"]{
   margin-bottom: 0;
-  background-color: #00a9cf;
+  background-color: #36a32e;
   color: #fff;
-  border-color: #00a9cf;
+  border-color: #36a32e;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 2px 2px #000;
@@ -439,7 +440,7 @@ img{
 }
 
 .register form input[type="submit"]:hover{
-  background-color: #007f9c;
+  background-color: #257220;
   text-shadow: none;
 }
 
@@ -452,15 +453,67 @@ img{
   right: 10px;
   top: 30%;
   font-size: 20px;
-  color: #00a9cf;
+  color: #1072b5;
   cursor: pointer;
+}
+
+
+/*Menu*/
+
+.menu{
+  min-width: 300px;
+  min-height: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  padding-top: 84px;
+  display: none;
+  z-index: 2;
+}
+
+.menu ul li{
+  text-align: center;
+  border-bottom: 4px solid #eee;
+
+}
+
+.menu ul li:hover{
+  background-color: #1072b5;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 15px;
+
+}
+
+.menu ul li:last-child{
+  border: none;
+}
+
+.menu ul li a:hover{
+  color: #fff;
+}
+
+.menu .login-btn,
+.menu .register-btn{
+  padding: 15px;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
 }
 
 
 /*Pager*/
 
 .pager{
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -482,21 +535,23 @@ img{
   width: 160px;
   font-size: 16px;
   color: #fff;
-  background-color: #00a9cf;
-  border-color: #00a9cf;
+  background-color: #1072b5;
+  border-color: #1072b5;
   border-style: solid;
   font-weight: bold;
   border-radius: 4px;
   padding: 6px;
   height: 40px;
+  text-shadow: 2px 2px #000;
+  transition: all ease-in-out 0.3s;
 }
 
 .pager .headline a{
   width: 160px;
   font-size: 16px;
   color: #fff;
-  background-color: #00a9cf;
-  border-color: #00a9cf;
+  background-color: #1072b5;
+  border-color: #1072b5;
   border-style: solid;
   font-weight: bold;
   border-radius: 4px;
@@ -506,6 +561,24 @@ img{
   justify-content: center;
   align-items: center;
   height: 40px;
+  text-shadow: 2px 2px #000;
+  transition: all ease-in-out 0.3s;
+}
+
+.pager .headline a:hover,
+.pager .headline button:hover{
+  text-shadow: none;
+  background-color: #0b4f7e;
+}
+
+.pager .description{
+  margin-bottom: 20px;
+}
+
+.pager h3{
+  font-weight: bold;
+  margin-bottom: 1%;
+  font-size: 20px;
 }
 
 .pager form{
@@ -526,9 +599,8 @@ img{
   margin-bottom: 20px;
   font-size: 16px;
   border-radius: 4px;
-  border-width: 1px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  border-color: #ccc;
+  border: 1px solid #ccc;
 }
 
 .pager form textarea{
@@ -553,19 +625,19 @@ img{
   flex: 1;
 }
 
-.pager form > div div:first-child{
+.pager form > div > div:first-child{
   margin-right: 10px;
 }
 
-.pager form > div div:last-child{
+.pager form > div > div:last-child{
   margin-left: 10px;
 }
 
 .pager form input[type="submit"]{
   margin-bottom: 0;
-  background-color: #00a9cf;
+  background-color: #36a32e;
   color: #fff;
-  border-color: #00a9cf;
+  border-color: #36a32e;
   font-size: 18px;
   font-weight: bold;
   text-shadow: 2px 2px #000;
@@ -573,8 +645,24 @@ img{
 }
 
 .pager form input[type="submit"]:hover{
-  background-color: #007f9c;
+  background-color: #257220;
   text-shadow: none;
+}
+
+.pager form .wishpreview{
+    border-radius: 4px;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    height: 377px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.pager form .wishpreview img{
+  max-height: 370px;
 }
 
 .pager .wishlist-wrapper{
@@ -583,7 +671,6 @@ img{
   min-width: 100%;
   margin-left: -1%;
   margin-right: -1%;
-  align-items: flex-start;
 }
 
 .pager .wishlist-wrapper .wishlist{
@@ -597,7 +684,7 @@ img{
   margin-bottom: 2%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
-  align-content: flex-start;
+  min-height: 120px;
 }
 
 .pager .wishlist-wrapper .wishlist .listheader{
@@ -614,16 +701,122 @@ img{
   margin-bottom: 10px;
 }
 
-
-.pager .wishlist-wrapper .wishlist ul{
+.pager .wishlist-wrapper .wishlist div{
   display: flex;
   justify-content: space-between;
   margin-top:auto;
 }
 
-.pager .wishlist-wrapper .wishlist ul li a{
+.pager .wishlist-wrapper .wishlist div a,
+.pager .wishlist-wrapper .wishlist div button{
   text-decoration: none;
-  color: #00a9cf;
+  background-color: #1072b5;
+  font-size: 14px;
+  display: flex;
+  height: 30px;
+  width: 85px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  transition: all ease-in-out 0.3s;
+}
+
+.pager .wishlist-wrapper .wishlist div a:hover,
+.pager .wishlist-wrapper .wishlist div button:hover{
+  text-shadow: none;
+  background-color: #0b4f7e;
+}
+
+.pager .wish-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
+.pager .wish-wrapper .wish{
+  width: 31.33333333333333%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.pager .wish-wrapper .wish .wish-img{
+  border: 3px solid #eee;
+  border-bottom: none;
+  border-radius: 4px;
+  position: relative;
+}
+
+.pager .wish-wrapper .wish .wish-text{
+  background-color: #eee;
+  padding: 15px;
+}
+
+.pager .wish-wrapper .wish .wish-text p{
+  margin-bottom: 10px;
+}
+
+.pager .wish-wrapper .wish .wish-text .wish-price{
+  font-weight: bold;
+}
+
+.pager .wish-wrapper .wish .wish-links{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pager .wish-wrapper .wish .wish-links a{
+  text-decoration: none;
+  background-color: #1072b5;
+  font-size: 14px;
+  display: flex;
+  height: 30px;
+  width: 85px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  transition: all ease-in-out 0.3s;
+}
+
+.pager .wish-wrapper .wish .wish-links button{
+  background-color: #1072b5;
+  border: none;
+  font-size: 14px;
+  width: 85px;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+  transition: all ease-in-out 0.3s;
+  padding: 0;
+}
+
+.pager .wish-wrapper .wish .wish-links button:hover,
+.pager .wish-wrapper .wish .wish-links a:hover{
+  text-shadow: none;
+  background-color: #0b4f7e;
+}
+
+.banner{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+
+.disabled{
+  background-color: #ccc !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  cursor: default;
 }
 
 
@@ -632,9 +825,6 @@ img{
 .main-footer{
   background-color: #1072b5;
   min-width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   min-height: 130px;
   border-top: 4px solid #eb5f69;
   color: #fff;
@@ -682,3 +872,120 @@ img{
   margin-right: 0px;
   padding-right: 0px;
 }
+
+
+/*Responsive*/
+
+@media only screen and (max-width: 1400px) {
+  /*Wish*/
+  .pager .wish-wrapper .wish{
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  /*Wishlist*/
+  .wishlist{
+    width: 48% !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  /*Pager*/
+  .pager{
+    max-width: 80%;
+  }
+}
+
+
+@media only screen and (max-width: 950px) {
+  /*Pager*/
+  .pager{
+    max-width: 100%;
+  }
+
+
+  @media only screen and (max-width: 850px) {
+    /*Landingpage*/
+    .landingpage{
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    /*Landingpage*/
+    .landingpage{
+      flex-direction: column;
+    }
+
+    .landingpage div h2{
+      font-size: 50px;
+    }
+
+    /*Hidden*/
+    .hidden{
+      display: block;
+    }
+
+    /*Navigator*/
+    .main-navigator ul li:first-child,
+    .main-navigator ul li:nth-child(2){
+      display: none;
+    }
+
+    /*Menu*/
+    .menu{
+      min-width: 100%;
+    }
+
+    /*Landingpage*/
+    .landingpage div img{
+      height: 350px !important;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    /*Wish*/
+    .pager .wish-wrapper .wish{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    /*Wishlist*/
+    .wishlist{
+      width: 100% !important;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    /*Landingpage*/
+    .landingpage div img{
+      height: 300px !important;
+    }
+
+    /*Pager*/
+    .pager form > div{
+      flex-direction: column;
+    }
+
+    .pager form > div > div{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    /*Login / Register*/
+    .login{
+      padding: 10px;
+      min-width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    /*Landingpage*/
+    .landingpage div img{
+      height: 250px !important;
+    }
+  }

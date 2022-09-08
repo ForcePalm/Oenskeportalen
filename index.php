@@ -38,7 +38,7 @@
 
       <!--Logo-->
       <div class="logo">
-        <a href="">
+        <a href="/">
           <img src="gfx/favicon.png" alt="Ønskeportalen logo" />
           <h1>Ønskeportalen</h1>
         </a>
@@ -47,8 +47,9 @@
       <!--Navigator-->
       <nav class="main-navigator">
         <ul>
-          <li id="register">Tilmeld</li>
-          <li id="login">Login</li>
+          <li class="register-btn">Tilmeld</li>
+          <li class="login-btn">Login</li>
+          <li id="menu"><span class="fas fa-bars menu-icon"></span></li>
         </ul>
       </nav>
     </header>
@@ -56,15 +57,23 @@
     <!--Main-->
     <main class="main-content">
 
-      <!--Landingpage-->
-      <div class="landingpage">
-        <div>
-          <h2>Hej og velkommen til Ønskeportalen</h2>
-          <h3>Ønskeportalen gør det nemt for dig at gemme og dele ønskerlister med familie og venner.</h3>
-        </div>
-        <div>
-          <img src="gfx/gift.png" alt="Blå gave med rødtbånd" />
-        </div>
+      <!--Menu-->
+      <div class="menu">
+        <ul>
+          <li><a href="/">Forside</a></li>
+          <li class="register-btn">Tilmeld</li>
+          <li class="login-btn">Login</li>
+          <li><a href="?page=om">Om Os</a></li>
+          <li><a href="?page=hjaelp">Hjælp</a></li>
+        </ul>
+      </div>
+
+      <!--Pager-->
+      <div class="pager">
+        <?php
+          //Pager
+          require_once 'code/pager.php';
+         ?>
       </div>
 
       <!--Popup-->
@@ -143,17 +152,18 @@
         </form>
       </div>
 
-      <!--Footer-->
-      <footer class="main-footer">
-        <p class="big-text">Ønskeportalen</p>
-        <p class="small-text">Copyright © 2022 Ønskeportalen</p>
-        <ul>
-          <li><a href="">Om os</a></li>
-          <li><a href="mailto:email@example.com">Kontakt</a></li>
-          <li><a href="">Hjælp</a></li>
-        </ul>
-      </footer>
     </main>
+
+    <!--Footer-->
+    <footer class="main-footer">
+      <p class="big-text">Ønskeportalen</p>
+      <p class="small-text">Copyright © 2022 Ønskeportalen</p>
+      <ul>
+        <li><a href="?page=om">Om os</a></li>
+        <li><a href="mailto:email@example.com">Kontakt</a></li>
+        <li><a href="?page=hjaelp">Hjælp</a></li>
+      </ul>
+    </footer>
 
 
     <!--Popup script-->
@@ -167,5 +177,8 @@
 
     <!--Register script-->
     <script src="js/register_form_script.js"></script>
+
+    <!--Menu script-->
+    <script src="../js/menu.js"></script>
   </body>
 </html>

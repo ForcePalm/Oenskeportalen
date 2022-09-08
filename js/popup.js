@@ -1,11 +1,11 @@
 $(document).ready(function(){
     //register
-    $("#register").click(function(){
+    $(".register-btn").click(function(){
       $(".popup-overlay").show();
     });
 
     //Login
-    $("#login").click(function(){
+    $(".login-btn").click(function(){
       $(".popup-overlay").show();
     });
 

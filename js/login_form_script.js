@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //Login
-    $("#login").click(function(){
+    $(".login-btn").click(function(){
       $(".login").show();
     });
 });
