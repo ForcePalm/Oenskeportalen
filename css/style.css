@@ -829,6 +829,40 @@ img{
   background-color: #0b4f7e;
 }
 
+.pager .om-wrapper{
+  display: flex;
+}
+
+.pager .om-wrapper > div{
+  flex: 1;
+}
+
+.pager .om-wrapper div:first-child{
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pager .om-wrapper div:first-child p{
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.pager .om-wrapper div:last-child{
+  margin-left: 5px;
+  text-align: center;
+}
+
+.pager .om-wrapper img{
+  max-height: 400px;
+}
+
+.pager .help p{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .banner{
   position: absolute;
   z-index: 1;
