@@ -1010,6 +1010,21 @@ img{
     .pager .wish-wrapper .wish{
       width: 100%;
     }
+    .pager .om-wrapper{
+      flex-direction: column;
+    }
+
+    .pager .om-wrapper > div{
+      flex: 1;
+    }
+
+    .pager .om-wrapper div:first-child{
+      margin-right: 0px;
+    }
+
+    .pager .om-wrapper div:last-child{
+      margin-left: 0px;
+    }
   }
 
   @media only screen and (max-width: 640px) {
