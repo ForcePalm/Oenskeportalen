@@ -4,43 +4,29 @@
 
 <!--Wishlist-->
 <div class="wishlist-wrapper">
-  <div class="wishlist">
-    <p class="listheader">Ønskelistenavn</p>
-    <p class="listdescription">Min nye ønskeseddel til min fødselsdag.</p>
-    <p class="wishcount">Ønsker: 6</p>
-    <div class="wishlist-links">
-      <a href="?page=deltliste">Se Liste</a>
 
-      <button>Fjern</button>
-    </div>
-  </div>
+  <?php
+    $result = $crud->SelectAll('Shared', 'users_id', $_SESSION['login_id']);
 
-  <div class="wishlist">
-    <p class="listheader">Ønskeliste 2</p>
-    <p class="listdescription">Min super seje ønskeseddel til min fødselsdag.</p>
-    <p class="wishcount">Ønsker: 12</p>
-    <div class="wishlist-links">
-      <a href="?page=deltliste">Se Liste</a>
-      <button>Fjern</button>
-    </div>
-  </div>
+    while ($sharedid = $result->fetch_object()) {
 
-  <div class="wishlist">
-    <p class="listheader">Min ønskeliste</p>
-    <p class="wishcount">Ønsker: Ingen</p>
-    <div class="wishlist-links">
-      <a href="?page=deltliste">Se Liste</a>
-      <button>Fjern</button>
-    </div>
+      $wishid = $crud->Select('Wishlist', 'id', $sharedid->wishlist_id);
+      $row = $crud->SelectCountID('Wish', 'wishlist_id', $wishid->id);
+      ?>
+        <div class="wishlist">
+          <p class="listheader"><?php echo $wishid->title; ?></p>
+          <p class="listdescription"><?php echo $wishid->description; ?></p>
+          <p class="wishcount">Ønsker: <?php echo $row->Amount; ?></p>
+          <div class="wishlist-links">
+            <button id="<?php echo $wishid->id; ?>" onclick="getshareid();" >Se Liste</button>
+            <button id="<?php echo $wishid->id; ?>" onclick="removelist();" >Fjern</button>
+          </div>
+        </div>
+      <?php
+    }
 
-  </div>
-
-  <div class="wishlist">
-    <p class="listheader">Ønskeliste</p>
-    <p class="wishcount">Ønsker: 2</p>
-    <div class="wishlist-links">
-      <a href="?page=deltliste">Se Liste</a>
-      <button>Fjern</button>
-    </div>
-  </div>
+   ?>
 </div>
+
+<script src="js/sharelistid.js"></script>
+<script src="js/remove.js"></script>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!$_SESSION['loggedin']){
+  header('Location: /');
+}
+require_once "../code/dbcon.php";
+$crud = new Crud($db);
+
+?>
 <!DOCTYPE html>
 <html lang="da">
   <head>
@@ -38,7 +47,7 @@
 
       <!--Logo-->
       <div class="logo">
-        <a href="?page=oversigt">
+        <a href="/oversigt">
           <img src="../gfx/favicon.png" alt="Ønskeportalen logo" />
           <h1>Ønskeportalen</h1>
         </a>
@@ -47,7 +56,7 @@
       <!--Navigator-->
       <nav class="main-navigator">
         <ul>
-          <li><a href="?page=profil">Lasse Schmidt</a></li>
+          <li><a href="profil"><?php echo $_SESSION['login_name']; ?></a></li>
           <li><a href="code/logout.php">Logud</a></li>
           <li id="menu"><span class="fas fa-bars menu-icon"></span></li>
         </ul>
@@ -60,13 +69,13 @@
       <!--Menu-->
       <div class="menu">
         <ul>
-          <li><a href="?page=oversigt">Oversigt</a></li>
-          <li class="hidden"><a href="?page=profil">Min Profil</a></li>
-          <li><a href="?page=opretliste">Opret Ønskeliste</a></li>
-          <li><a href="?page=delt">Delt Med Mig</a></li>
-          <li><a href="?page=om">Om Os</a></li>
-          <li><a href="?page=hjealp">Hjælp</a></li>
-          <li class="hidden"><a href="code/logout.php">Logud</a></li>
+          <li><a href="oversigt">Oversigt</a></li>
+          <li class="hidden"><a href="profil">Min Profil</a></li>
+          <li><a href="opretliste">Opret Ønskeliste</a></li>
+          <li><a href="delt">Delt Med Mig</a></li>
+          <li><a href="/om">Om Os</a></li>
+          <li><a href="/hjaelp">Hjælp</a></li>
+          <li class="hidden"><a href=" ../code/logout.php">Logud</a></li>
         </ul>
       </div>
 
@@ -92,5 +101,38 @@
 
     <!--Menu script-->
     <script src="../js/menu.js"></script>
+
+    <!--Share-->
+    <script src="../js/share.js"></script>
+
+    <script>
+      var userid = (<?php echo $_SESSION['login_id']; ?>);
+    </script>
+
+    <?php
+      if(!empty($_SESSION['listid'])){
+        ?>
+        <script>
+          var listid = (<?php echo $_SESSION['listid']; ?>);
+        </script>
+        <?php
+      }
+
+      if(!empty($_SESSION['editid'])){
+        ?>
+        <script>
+          var editid = (<?php echo $_SESSION['editid']; ?>);
+        </script>
+        <?php
+      }
+
+      if(!empty($_SESSION['sharelistid'])){
+        ?>
+        <script>
+          var sharelistid = (<?php echo $_SESSION['sharelistid']; ?>);
+        </script>
+        <?php
+      }
+    ?>
   </body>
 </html>

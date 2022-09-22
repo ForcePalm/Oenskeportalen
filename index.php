@@ -1,8 +1,14 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="da">
   <head>
     <!--Charset-->
     <meta charset="utf-8">
+
+    <!--Meta description-->
+    <meta name="description" content="Alle har ønsker. Og nu har du et sted at gemme dem. Ønskeportalen følger dig overalt og gør det nemt at dele dine ønsker med venner og familie."/>
 
     <!--Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,8 +49,38 @@
           <h1>Ønskeportalen</h1>
         </a>
       </div>
+      <?php
+      if($_SESSION['loggedin']){
+      ?>
+      <!--Navigator if logged in-->
+      <nav class="main-navigator">
+        <ul>
+          <li><a href="oversigt/profil"><?php echo $_SESSION['login_name']; ?></a></li>
+          <li><a href="code/logout.php">Logud</a></li>
+          <li id="menu"><span class="fas fa-bars menu-icon"></span></li>
+        </ul>
+      </nav>
+    </header>
 
-      <!--Navigator-->
+    <!--Main-->
+    <main class="main-content">
+
+      <!--Menu-->
+      <div class="menu">
+        <ul>
+          <li><a href="oversigt/">Oversigt</a></li>
+          <li class="hidden"><a href="oversigt/profil">Min Profil</a></li>
+          <li><a href="oversigt/opretliste">Opret Ønskeliste</a></li>
+          <li><a href="oversigt/delt">Delt Med Mig</a></li>
+          <li><a href="om">Om Os</a></li>
+          <li><a href="hjaelp">Hjælp</a></li>
+          <li class="hidden"><a href="code/logout.php">Logud</a></li>
+        </ul>
+      </div>
+      <?php
+      }else{
+      ?>
+      <!--Navigator not logged in-->
       <nav class="main-navigator">
         <ul>
           <li class="register-btn">Tilmeld</li>
@@ -63,10 +99,13 @@
           <li><a href="/">Forside</a></li>
           <li class="register-btn">Tilmeld</li>
           <li class="login-btn">Login</li>
-          <li><a href="?page=om">Om Os</a></li>
-          <li><a href="?page=hjaelp">Hjælp</a></li>
+          <li><a href="om">Om Os</a></li>
+          <li><a href="hjaelp">Hjælp</a></li>
         </ul>
       </div>
+      <?php
+      }
+      ?>
 
       <!--Pager-->
       <div class="pager">
@@ -90,11 +129,11 @@
 
         <!--Login error message-->
         <div class="login-error">
-          <p>Email eller Password matcher ikke</p>
+          <p id="response-login">Email eller Password matcher ikke</p>
         </div>
 
         <!--Login form-->
-        <form onSubmit="return false;">
+        <form id="login-form" onSubmit="return false;">
           <label for="loginemail">Email</label>
           <input type="email" name="loginemail" id="loginemail" required>
 
@@ -104,7 +143,7 @@
             <span class="fas fa-eye show-password" title="Vis password"></span>
           </div>
 
-          <input type="submit" value="Login">
+          <input id="login-but" type="submit" value="Login">
         </form>
 
         <p class="forgot-password">Glemt password?</p>
@@ -121,12 +160,12 @@
 
         <!--Register error message-->
         <div class="register-error">
-          <p>Email allerede i brug</p>
+          <p class="errortxt">Email allerede i brug</p>
         </div>
 
         <!--Register succes message-->
         <div class="register-succes">
-          <p>Bruger oprettet</p>
+          <p class="successtxt">Bruger oprettet</p>
         </div>
 
         <!--Register form-->
@@ -147,8 +186,7 @@
           <label for="regbirthday">Fødselsdag</label>
           <input type="date" name="regbirthday" id="regbirthday" required>
 
-          <input type="submit" value="Opret">
-
+          <input id="reg-but" type="submit" value="Opret">
         </form>
       </div>
 
@@ -174,9 +212,11 @@
 
     <!--Login script-->
     <script src="js/login_form_script.js"></script>
+    <script src="js/login.js"></script>
 
     <!--Register script-->
     <script src="js/register_form_script.js"></script>
+    <script src="js/register.js"></script>
 
     <!--Menu script-->
     <script src="../js/menu.js"></script>

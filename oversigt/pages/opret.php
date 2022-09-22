@@ -1,11 +1,11 @@
 <div class="headline">
   <h2>Opret Ønske</h2>
   <div>
-    <a href="?page=liste">Annuller</a>
+    <a href="liste">Annuller</a>
   </div>
 </div>
 
-<form>
+<form onsubmit="return false;" enctype="multipart/form-data" id="wishform">
   <div>
     <div>
       <label for="wishname">Ønske navn</label>
@@ -17,8 +17,8 @@
       <label for="wishlink">Link</label>
       <input type="url" name="wishlink" id="wishlink">
 
-      <label for="description">Beskrivelse</label>
-      <textarea name="description" id="description"></textarea>
+      <label for="wishdescription">Beskrivelse</label>
+      <textarea name="wishdescription" id="wishdescription"></textarea>
     </div>
 
     <div>
@@ -33,8 +33,10 @@
     </div>
   </div>
 
-  <input type="submit" value="Opret">
+  <input id="newwish-btn" type="submit" value="Opret">
 </form>
 
 <!--Preview upload script-->
 <script src="../js/preview_upload_script.js"></script>
+
+<script src="js/newwish.js"></script>

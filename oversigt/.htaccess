@@ -1,0 +1,14 @@
+#Turn Rewrite Engine On
+RewriteEngine On
+
+#A condition must be true for the next RewriteRule to be processed
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Removes .html from url
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+#Removes .php from url
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Rewrites ?page= to /pagename
+RewriteRule ^([^/]*)\.html$ /oversigt/?page=$1 [L]

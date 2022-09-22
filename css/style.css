@@ -481,6 +481,7 @@ img{
 
 .menu ul li:hover{
   background-color: #1072b5;
+  color: #fff;
 }
 
 .menu ul li a{
@@ -569,6 +570,18 @@ img{
 .pager .headline button:hover{
   text-shadow: none;
   background-color: #0b4f7e;
+}
+
+.pager .headline div{
+  display: flex;
+}
+
+.pager .headline div a:last-child{
+  margin-left: 10px;
+}
+
+.pager .headline div button:last-child{
+  margin-left: 10px;
 }
 
 .pager .description{
@@ -722,6 +735,7 @@ img{
   font-weight: bold;
   text-shadow: 2px 2px #000;
   transition: all ease-in-out 0.3s;
+  border: 0;
 }
 
 .pager .wishlist-wrapper .wishlist div a:hover,
@@ -742,6 +756,8 @@ img{
   margin-bottom: 2%;
   margin-left: 1%;
   margin-right: 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 .pager .wish-wrapper .wish .wish-img{
@@ -749,11 +765,18 @@ img{
   border-bottom: none;
   border-radius: 4px;
   position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.pager .wish-wrapper .wish .wish-img img{
+  height: 200px;
 }
 
 .pager .wish-wrapper .wish .wish-text{
   background-color: #eee;
   padding: 15px;
+  flex: 1;
 }
 
 .pager .wish-wrapper .wish .wish-text p{
@@ -797,6 +820,7 @@ img{
   text-shadow: 2px 2px #000;
   transition: all ease-in-out 0.3s;
   padding: 0;
+  height: 30px;
 }
 
 .pager .wish-wrapper .wish .wish-links button:hover,
@@ -819,6 +843,9 @@ img{
   cursor: default;
 }
 
+.userid {
+  display: none !important;
+}
 
 /*Footer*/
 
@@ -903,7 +930,7 @@ img{
   .pager{
     max-width: 100%;
   }
-
+}
 
   @media only screen and (max-width: 850px) {
     /*Landingpage*/
@@ -972,6 +999,21 @@ img{
     .pager form > div > div{
       margin-left: 0 !important;
       margin-right: 0 !important;
+    }
+
+    .pager .headline div{
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .pager .headline div button:last-child{
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    .pager .headline div a:last-child{
+      margin-left: 0;
+      margin-top: 10px;
     }
   }
 

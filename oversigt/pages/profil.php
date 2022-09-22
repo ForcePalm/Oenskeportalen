@@ -2,28 +2,30 @@
 <div class="headline">
   <h2>Min Profil</h2>
   <div>
-    <button>Slet Profil</button>
+    <button id="<?php echo $_SESSION['login_id'] ?>" class="delete">Slet Profil</button>
   </div>
 </div>
-
+<?php
+$profil = $crud->Select('Users', 'id', $_SESSION['login_id']);
+?>
 <!--Profile form-->
-<form onSubmit="return false;">
+<form id="profile" onSubmit="return false;">
   <div>
     <div>
       <label for="name">Navn</label>
-      <input type="text" name="name" value="Lasse Schmidt" id="name" required>
+      <input type="text" name="name" value="<?php echo $profil->name; ?>" id="name" required>
     </div>
 
     <div>
       <label for="email">Email</label>
-      <input type="email" name="emil" value="lass8465@cvkweb.dk" id="email" required>
+      <input type="email" name="emil" value="<?php echo $profil->email; ?>" id="email" required>
     </div>
   </div>
 
   <div>
     <div>
       <label for="birthday">Fødselsdag</label>
-      <input type="date" name="birthday" value="1995-03-29" id="birthday" required>
+      <input type="date" name="birthday" value="<?php echo $profil->birthday; ?>" id="birthday" required>
     </div>
 
     <div>
@@ -32,5 +34,11 @@
     </div>
   </div>
 
-    <input type="submit" value="Gem">
+  <div>
+    <input type="text" name="userid" id="userid" class="userid" value="<?php echo $_SESSION['login_id']; ?>">
+  </div>
+
+    <input id="profile-but" type="submit" value="Gem">
 </form>
+<script src="js/updateprofile.js"></script>
+<script src="js/deleteuser.js"></script>
