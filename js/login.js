@@ -16,7 +16,8 @@ $(document).ready(function(){
                     if(response == 1){
                       window.location = "/oversigt";
                     }else{
-                      $('#login-error').text('Forkert E-Mail eller Password!');
+                      $('.login-error').show();
+                      $('#response-login').text('Forkert E-Mail eller Password!');
                     }
                 }
             });

@@ -7,6 +7,6 @@
   <p>På Oversigtssiden kan du oprette dine ønskelister, du kan også se dine ønsker og redigere din ønskeliste.</p>
   <p>For at dele en ønskeliste skal du trykke på "se liste" og derefter på den blå knap "Del Ønskeliste" også sender du linket til den / de personer du ønsker at dele den med.</p>
   <p>På siden "Delt Med Mig" kan du se de ønskerlister som folk har delt med dig, du kan trykke på "Se liste" for at resservere et ønske.</p>
-  <p>Hvis et ønske er resserveret af en anden kan du ikke også resservere det.</p>
+  <p>Hvis et ønske er reserveret af en anden kan du ikke reservere det.</p>
   <p>På "Min Profil" kan du ændre dine login oplysninger.</p>
 </div>

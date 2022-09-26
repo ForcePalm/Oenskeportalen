@@ -1072,6 +1072,10 @@ img{
       padding: 10px;
       min-width: 100%;
     }
+    .register{
+      padding: 10px;
+      min-width: 100%;
+    }
   }
 
   @media only screen and (max-width: 400px) {

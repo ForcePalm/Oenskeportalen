@@ -129,7 +129,7 @@
 
         <!--Login error message-->
         <div class="login-error">
-          <p id="response-login">Email eller Password matcher ikke</p>
+          <p id="response-login">Forkert E-Mail eller Password!</p>
         </div>
 
         <!--Login form-->

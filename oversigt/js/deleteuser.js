@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $(".delete").click(function(e){
+      if (confirm('Er du helt sikker på at du vil slette din profil på ønskeportalen ?')) {
         var user_id = this.id;
 
         var settings = {
@@ -17,5 +18,7 @@ $(document).ready(function(){
           $.ajax(settings).done(function (response) {
             console.log(response);
           });
+      }
+
     });
 });
